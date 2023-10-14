@@ -1,0 +1,143 @@
+:root{
+    --white:white;
+    --light-gray:#f0f0f0;
+    --dark-gray:#6c6c6c;
+    --black:#1e1e1e;
+    --yellow:#f99c14;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#calculator{
+     display: grid;
+     grid-template-areas:
+        "display display display display"
+        "clear negative percentage divide"
+        "seven eight nine multiply"
+        "four five six subtract"
+        "one two three add"
+        "zero zero decimal equals" ;
+        grid-template-columns: repeat(4,7rem);
+        gap:1.4rem;
+        padding: 4rem;
+        padding-top: 1rem;
+        margin-top: 1.4rem;
+        border-radius: 1.3rem;
+        background-color: var(--black);
+        
+
+}
+.light-gray{
+    background-color: var(--light-gray);
+}
+.dark-gray{
+    background-color: var(--dark-gray);
+    color: var(--white);
+}
+.yellow{
+    background-color: var(--yellow);
+    color: var(--white);
+}
+button{
+    height: 5rem;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 100px;
+    width:100%;
+    transition: transform 0.1s ease-in-out;
+}
+button:active{
+    transform: scale(0.95);
+}
+#answer{
+    height: 3rem;
+    font-size: 3rem;
+    color: var(--white);
+}
+#expression{
+    font-size: 2rem;
+    height: 2rem;
+    color:var(--dark-gray);
+}
+#divide{
+    grid-area: divide;
+}
+#display{
+    grid-area: display;
+}
+#clear{
+    grid-area: clear;
+}
+#percentage{
+    grid-area: percentage;
+}
+#negative{
+    grid-area: negative;
+}
+#divide{
+    grid-area: divide;
+}
+#seven{
+    grid-area: seven;
+}
+#eight{
+    grid-area: eight;
+}
+#nine{
+    grid-area: nine;
+}
+#multiply{
+    grid-area: multiply;
+}
+#four{
+    grid-area: four;
+}
+#five{
+    grid-area: five;
+}
+#subtract{
+    grid-area: subtract;
+}
+#one{
+    grid-area: one;
+}
+#two{
+    grid-area: two;
+}
+#three{
+    grid-area: three;
+}
+#add{
+    grid-area: add;
+}
+#decimal{
+    grid-area: decimal;
+}
+#equals{
+    grid-area: equals;
+}
+#zero{
+    grid-area: zero;
+}
+
+@media screen and (max-width:650px) {
+    button{
+        height: 3rem;
+    width: 3rem;
+    }
+    #calculator{
+        /* margin-inline: 4rem; */
+        padding: 2rem;
+        gap: 0.4rem;
+        place-items: center;
+        grid-template-columns: repeat(4,4rem);
+    }
+    #zero{
+        width: 100%;
+    }
+}
